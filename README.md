@@ -1,13 +1,12 @@
 
 <h1>wireshark-analysis</h1>
-<h3>Project Description</h3>
-At my previous organization, i was provided with a file (.pcap) that contains a capture packet data from a system used by a user, to connect to my organization website. I have been asked to analyze the capture file to gather relevant information, using wireshark. I used packet sniffer to filter the network traffic at the launch of the file, to first identify the source and destination IP addresses that are involved in the web browsing session.<br />
+<h2>Project Description</h2>
+At my previous organization, i was provided with a file (.pcap) that contains a capture packet data from a system used by a user, to connect to my organization website. I have been asked to analyze the capture file to gather relevant information, using wireshark. I used packet sniffer to filter the network traffic at the launch of the file to first identify the source and destination IP addresses that are involved in the web browsing session.<br />
 
 <h2>Environments and Technologies Used</h2>
 
-- Microsoft Azure (Virtual Machines/Computer)
+- (Virtual Machines/Computer)
 - Remote Desktop
-- Internet Information Services (IIS)
 
 <h2>Operating Systems Used</h2>
 
@@ -15,13 +14,8 @@ At my previous organization, i was provided with a file (.pcap) that contains a 
 
 <h2>List of Prerequisites</h2>
 
-- Microsoft Virtual Machine Set-up (Azure)
+- Microsoft Virtual Machine Set-up
 - Remote Desktop Connection
-- Instal/Enable os-Ticket dependencies in window such as IIS(Internet Infofrmation Services)
-- Installing Web Platform Installer
-- Installing MYSQL Database 
-- Installation of C++ Redistributable  
-- Installation of os-Ticket V1.15.8
 
 <h2>Graphical Analysis</h2>
 
@@ -29,7 +23,15 @@ At my previous organization, i was provided with a file (.pcap) that contains a 
 <img src="https://i.imgur.com/Bl3mW3o.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-In this step, virtual machine was set-up in Azure using the free version as shown above. The virtual machine comprises of tenants, active subscription, resource groups, virtual network and subnets. Then, a remote desktop machine was then used from a client computer to connect remotely to the virtual machine that was set-up in Azure environment using its public ip address.
+First, after i opened the capture data file using wireshark, I started obseving wireshark Graphical User Interface, which comprises of lot of network packet traffic. Each packet in the interface, has the following key property columns;
+No. : The index number of the packet in this packet capture file
+Time: The timestamp of the packet
+Source: The source IP address
+Destination: The destination IP address
+Protocol: The protocol contained in the packet
+Length: The total length of the packet
+Info: Some infomation about the data in the packet (the payload) as interpreted by Wireshark. Then i opened a detailed view of a single 
+ the apply a filter search tab, i entered this code ip.addr == 142.250.1.139
 </p>
 <br />
 
