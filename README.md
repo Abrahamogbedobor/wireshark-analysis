@@ -46,37 +46,39 @@ The source port and destination port listed here match the source and destinatio
 <br />
 
 <p>
-<img src="https://i.imgur.com/KQuEIhJ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/zTioMs8.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/oWiUV5r.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-<img src="https://i.imgur.com/1a2nX8O.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-The above pictures are Internet Information Services installation steps in windows. IIS is windows web server, as os-ticket uses web browser thus, it was required to enable IIS or instal it as a prerequisites before os-ticket installation. Notably, this IIS web server is then used to serve os web aplication on the installed computer. Also, the folder in which the installed IIS file is saved is been highlighted above.
+This filter "ip.src == 142.250.1.139", is for a specific spurce IP address unlike the previous one that was for a specific IP address. The lists contains packets that only came from 142.250.1.139. Also, this filter "ip.dst == 142.250.1.139", returns lists of packets that only came from 142.250.1.139.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/bOfXH2J.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/5g2EHT6.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/GwEr1At.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/LmJLUSm.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-The above figure is a web platform installer, that was installed in remote desktop windows, and it was used in installing other bunch of softwares such as MYSQL 5.5 databse, and some simple versions of x86 php files based on os-ticket prerequisite requirements.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/KMrXf6t.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-The above figure is a database as previously mentioned that is required for os-ticket to function. Any password of my choice was used, and the user name is 'roo't. Also, during installation some php files was unsuccessful however, they were seperately downloaded to complete the prerequisites installation steps as shown below. These files are Microsft c++ redistributable packages and php manager.
+This filter "eth.addr == 42:01:ac:15:e0:02", displays traffic to or from a specific Ethernet MAC address. This filters traffic related to one MAC address that was discovered previously in my investigation, regardless of the other protocols involved: Notably, the MAC address that was specified in the filter is listed as either the source or destination address in the expanded Ethernet II subtree. Aslo, the Protocol field in the Internet Protocol Version 4 subtree indicates which IP internal protocol is contained in the packet. From my investigation it was TCP protocol.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/e5ZzcYZ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/39X7Coi.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/64E9gJ5.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
- The above figures (c++ redistributable and php manager are the downloaded files that failed previously)
+This "udp.port == 53" filter, was used to further explore and examine DNS traffic, DNS traffic uses UDP port 53, so this will list traffic related to DNS queries and responses only as shown above. First, i selected i selected sample DNS traffic, then i drill down into the protocol to examine how the DNS packet data contains both queries (names of internet sites that are being looked up) and answers (IP addresses that are being sent back by a DNS server when a name is successfully resolved). From inspecting, the Domain Name System (query) subtree, as well as Queries subtree, i obseeved that the name of the website that was query is "opensource.google.com" as shown above.
+</p>
+<br />
+
+<p>
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+ This filter "tcp.port == 80" was lastly used to explore and examine TCP traffics on wireshark. TCP 
 </p>
 <br />
 
