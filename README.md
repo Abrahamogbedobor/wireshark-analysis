@@ -50,7 +50,7 @@ The source port and destination port listed here match the source and destinatio
 <img src="https://i.imgur.com/oWiUV5r.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-This filter "ip.src == 142.250.1.139", is for a specific spurce IP address unlike the previous one that was for a specific IP address. The lists contains packets that only came from 142.250.1.139. Also, this filter "ip.dst == 142.250.1.139", returns lists of packets that only came from 142.250.1.139.
+This filter "ip.src == 142.250.1.139", is for a specific spurce IP address unlike the previous one that was for a specific IP address. The lists contains packets that only came from 142.250.1.139.
 </p>
 <br />
 
@@ -67,7 +67,6 @@ This filter "eth.addr == 42:01:ac:15:e0:02", displays traffic to or from a speci
 <p>
 <img src="https://i.imgur.com/39X7Coi.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <img src="https://i.imgur.com/64E9gJ5.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 This "udp.port == 53" filter, was used to further explore and examine DNS traffic, DNS traffic uses UDP port 53, so this will list traffic related to DNS queries and responses only as shown above. First, i selected i selected sample DNS traffic, then i drill down into the protocol to examine how the DNS packet data contains both queries (names of internet sites that are being looked up) and answers (IP addresses that are being sent back by a DNS server when a name is successfully resolved). From inspecting, the Domain Name System (query) subtree, as well as Queries subtree, i obseeved that the name of the website that was query is "opensource.google.com" as shown above.
