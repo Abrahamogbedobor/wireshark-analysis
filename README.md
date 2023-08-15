@@ -30,8 +30,7 @@ Source: The source IP address
 Destination: The destination IP address
 Protocol: The protocol contained in the packet
 Length: The total length of the packet
-Info: Some infomation about the data in the packet (the payload) as interpreted by Wireshark. Then i opened a detailed view of a single 
- the apply a filter search tab, i entered this code ip.addr == 142.250.1.139
+Info: Some infomation about the data in the packet (the payload) as interpreted by Wireshark. I quickly observed the data as i searched for an "ECHO ping request" in the info column. The reason was because i want to know what protocol is in used. Next, i need to filter the inbuilt network packet traffic from wireshark, using this code (ip.addr == 142.250.1.139). This is the source IP address of the user under my investigation. This IP address was entered on the search tab in wireshark that says 'Apply a display filter'.
 </p>
 <br />
 
