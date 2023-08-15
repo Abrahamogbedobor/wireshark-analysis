@@ -21,6 +21,7 @@ At my previous organization, i was provided with a file (.pcap) that contains a 
 
 <p>
 <img src="https://i.imgur.com/Bl3mW3o.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/GpUDTpP.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 First, after i opened the capture data file using wireshark, I started obseving wireshark Graphical User Interface, which comprises of lot of network packet traffic. Each packet in the interface, has the following key property columns;
@@ -30,15 +31,15 @@ Source: The source IP address
 Destination: The destination IP address
 Protocol: The protocol contained in the packet
 Length: The total length of the packet
-Info: Some infomation about the data in the packet (the payload) as interpreted by Wireshark. I quickly observed the data as i searched for an "ECHO ping request" in the info column. The reason was because i want to know what protocol is in used. Next, i need to filter the inbuilt network packet traffic from wireshark, using this code (ip.addr == 142.250.1.139). This is the source IP address of the user under my investigation. This IP address was entered on the search tab in wireshark that says 'Apply a display filter'.
+Info: Some infomation about the data in the packet (the payload) as interpreted by Wireshark. I quickly observed the data as i searched for an "ECHO ping request" in the info column. The reason was because i want to know what protocol is in used. Next, i need to filter the inbuilt network packet traffic from wireshark, using this code (ip.addr == 142.250.1.139). This is the source IP address of the user under my investigation. This IP address was entered on the search tab in wireshark that says 'Apply a display filter'. The list of packets displayed is now significantly reduced and contains only packets where either the source or the destination IP address matches the address i entered. Now only two packet colors are used: light pink for ICMP protocol packets and light green for TCP (and HTTP, which is a subset of TCP) packets.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/SsbrWL5.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/rl8wUXY.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-In order to successfully connect to the above remote desktop computer, same username and password that was used in setting up Azure Virtual Machine was used in a creating a new user.
+I double click the first packet with TCP protocol which then gave me access to a packet detailed pane window as shown above. The upper section of this window contains subtrees where Wireshark provides me with an analysis of the various parts of the network packet. The lower section of the window contains the raw packet data displayed in hexadecimal and ASCII text. There is also placeholder text for fields where the character data does not apply, as indicated by the dot (“.”). The first subtree, from the pane window is named 'Frame', this provides me with details about the overall network packet, or frame, including the frame length and the arrival time of the packet. At this level, i started viewing information about the entire packet of data.
 </p>
 <br />
 
