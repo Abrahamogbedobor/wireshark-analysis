@@ -75,10 +75,11 @@ This "udp.port == 53" filter, was used to further explore and examine DNS traffi
 <br />
 
 <p>
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/0385lhn.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/5MrxAck.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
- This filter "tcp.port == 80" was lastly used to explore and examine TCP traffics on wireshark. TCP 
+ This filter "tcp.port == 80" was lastly used to explore and examine TCP traffics on wireshark. TCP port 80 is the default port that is associated with web traffic: From my investigation, i noticed that quite a few packets were created when the user accessed the web page http://opensource.google.com. Finally, this filter "tcp contains "curl"", was used to select TCP packet data that contains specific text data. This filters to packets containing web requests made with the curl command in this sample packet capture file.
 </p>
 <br />
 
