@@ -17,7 +17,7 @@ At my previous organization, i was provided with a file (.pcap) that contains a 
 - Microsoft Virtual Machine Set-up
 - Remote Desktop Connection
 
-<h2>Graphical Analysis</h2>
+<h2>Task Overview</h2>
 
 <p>
 <img src="https://i.imgur.com/Bl3mW3o.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
@@ -31,7 +31,7 @@ Source: The source IP address
 Destination: The destination IP address
 Protocol: The protocol contained in the packet
 Length: The total length of the packet
-Info: Some infomation about the data in the packet (the payload) as interpreted by Wireshark. I quickly observed the data as i searched for an "ECHO ping request" in the info column. The reason was because i want to know what protocol is in used. Next, i need to filter the inbuilt network packet traffic from wireshark, using this code (ip.addr == 142.250.1.139). This is the source IP address of the user under my investigation. This IP address was entered on the search tab in wireshark that says 'Apply a display filter'. The list of packets displayed is now significantly reduced and contains only packets where either the source or the destination IP address matches the address i entered. Now only two packet colors are used: light pink for ICMP protocol packets and light green for TCP (and HTTP, which is a subset of TCP) packets.
+Info: Some infomation about the data in the packet (the payload) as interpreted by Wireshark. I quickly observed the data as i searched for an "ECHO ping request" in the info column. The reason was because i want to know what protocol is in used. Next, i needed to filter the inbuilt network packet traffic from wireshark, so, i used this filter (ip.addr == 142.250.1.139). This IP address was entered on the search tab in wireshark that says 'Apply a display filter'. The list of packets displayed is now significantly reduced and contains only packets where either the source or the destination IP address matches the address i entered. Now only two packet colors are used: light pink for ICMP protocol packets and light green for TCP (and HTTP, which is a subset of TCP) packets.
 </p>
 <br />
 
@@ -50,7 +50,7 @@ The source port and destination port listed here match the source and destinatio
 <img src="https://i.imgur.com/oWiUV5r.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-This filter "ip.src == 142.250.1.139", is for a specific spurce IP address unlike the previous one that was for a specific IP address. The lists contains packets that only came from 142.250.1.139.
+This filter "ip.src == 142.250.1.139", is for a specific spurce IP address unlike the previous one that was for a specific IP address. This is the source IP address of the user under my investigation, the filtered lists contains packets that only came from 142.250.1.139.
 </p>
 <br />
 
