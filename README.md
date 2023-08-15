@@ -1,6 +1,7 @@
 
 <h1>wireshark-analysis</h1>
-This project outlines the prerequisites and installation of the open-source help desk ticketing system osTicket.<br />
+<h3>Project Description</h3>
+At my previous organization, i was provided with a file (.pcap) that contains a capture packet data from a system used by a user, to connect to my organization website. I have been asked to analyze the capture file to gather relevant information, using wireshark. I used packet sniffer to filter the network traffic at the launch of the file, to first identify the source and destination IP addresses that are involved in the web browsing session.<br />
 
 <h2>Environments and Technologies Used</h2>
 
@@ -22,10 +23,10 @@ This project outlines the prerequisites and installation of the open-source help
 - Installation of C++ Redistributable  
 - Installation of os-Ticket V1.15.8
 
-<h2>Installation Steps</h2>
+<h2>Graphical Analysis</h2>
 
 <p>
-<img src="https://i.imgur.com/eyk99gd.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/Bl3mW3o.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 In this step, virtual machine was set-up in Azure using the free version as shown above. The virtual machine comprises of tenants, active subscription, resource groups, virtual network and subnets. Then, a remote desktop machine was then used from a client computer to connect remotely to the virtual machine that was set-up in Azure environment using its public ip address.
