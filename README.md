@@ -12,10 +12,12 @@ At my previous organization, i was provided with a file (.pcap) that contains a 
 
 - Windows 10 (21H2)
 
-<h2>List of Prerequisites</h2>
+<h2>High-Level Steps</h2>
 
-- Microsoft Virtual Machine Set-up
-- Remote Desktop Connection
+- Identified Network Interfaces
+- Inspect Network Interface Traffic with Tcpdump
+- Capture Network Traffic with Tcpdump
+- Filtered Captured Packet Data
 
 <h2>Task Overview</h2>
 
