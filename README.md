@@ -14,10 +14,10 @@ At my previous organization, i was provided with a file (.pcap) that contains a 
 
 <h2>High-Level Steps</h2>
 
-- Identified Network Interfaces
-- Inspect Network Interface Traffic with Tcpdump
-- Capture Network Traffic with Tcpdump
-- Filtered Captured Packet Data
+- Inspect Packet Data with Wireshark
+- Apply Wireshark Filter and Inspect Packets
+- Using Filter to Select Packets
+- Using Filters to Explore DNS and TCP Packets
 
 <h2>Task Overview</h2>
 
