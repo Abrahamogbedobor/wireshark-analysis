@@ -1,4 +1,3 @@
-
 <h1>wireshark-analysis</h1>
 <h2>Project Description</h2>
 At my previous organization, i was provided with a file (.pcap) that contains a capture packet data from a system used by a user, to connect to my organization website. I have been asked to analyze the capture file to gather relevant information, using wireshark. I used packet sniffer to filter the network traffic at the launch of the file to first identify the source and destination IP addresses that are involved in the web browsing session.<br />
